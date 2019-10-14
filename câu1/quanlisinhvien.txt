@@ -1,0 +1,50 @@
+Create Database QuanLySV
+go
+
+use QuanLySV
+go
+
+Create table Student
+(
+ID char(5) Auto_Increase not null primary key,
+Name nvarchar(25) not null,
+Age nchar(2) not null,
+)
+
+Create table Class
+(
+ID char(5) Auto_Increase not null primary key,
+Class_name nvarchar(4) not null,
+)
+
+Create table DayOff
+(
+ID char(5) Auto_Increase not null primary key,
+Student_ID char(5) not null,
+Day_off datatime not null,
+)
+
+Insert into Student(ID,Name,Age)
+values('ST001',N'Trương Thanh Tùng',20)
+Insert into Student(ID,Name,Age)
+values('ST002',N'Nguyễn Thị Tươi',21)
+Insert into Student(ID,Name,Age)
+values('ST003',N'Nguyễn Văn Tú',21)
+Insert into Student(ID,Name,Age)
+values('ST004',N'Nguyễn Thị Thúy Hằng',20)
+
+
+Insert into Class(ID,Class_name)
+values('CL001',N'16T1')
+Insert into Class(ID,Class_name)
+values('CL002',N'16T2')
+Insert into Class(ID,Class_name)
+values('CL003',N'16T3')
+Insert into Class(ID,Class_name)
+values('CL004',N'16T4')
+
+
+Insert into DayOff(ID,Student_ID,Day_off)
+values('DO001',N'ST001','04102019')
+Insert into DayOff(ID,Student_ID,Day_off)
+values('DO002',N'ST003','10102019')
